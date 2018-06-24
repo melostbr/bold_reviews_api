@@ -1,8 +1,9 @@
-# Reviewer API
+# Reviews API
 
 ## Prerequisites
   - Python ~= 2.7
   - [Virtualenvwrapper](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+  - PostgreSQL ~= 10
 
 ## Development
   - Download this project and `cd` inside of it;
@@ -13,11 +14,13 @@
     ```
     export APP_SETTINGS="config.DevelopmentConfig"
     export FLASK_APP="app/app.py"
+    export SQLALCHEMY_DATABASE_URI="postgresql://localhost/reviews_api"
     ```
   - Edit `$VIRTUAL_ENV/bin/postdeactivate` to unset them:
     ```
     unset APP_SETTINGS
     unset FLASK_APP
+    unset SQLALCHEMY_DATABASE_URI
     ```
 
 ## Running
