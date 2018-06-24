@@ -14,13 +14,13 @@
     ```
     export APP_SETTINGS="config.DevelopmentConfig"
     export FLASK_APP="app/app.py"
-    export SQLALCHEMY_DATABASE_URI="postgresql://localhost/reviews_api"
+    export DATABASE_URL="postgresql://localhost/reviews_api"
     ```
   - Edit `$VIRTUAL_ENV/bin/postdeactivate` to unset them:
     ```
     unset APP_SETTINGS
     unset FLASK_APP
-    unset SQLALCHEMY_DATABASE_URI
+    unset DATABASE_URL
     ```
 
 ## Running
