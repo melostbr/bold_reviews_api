@@ -1,4 +1,4 @@
-# Reviews API
+# Bold Reviews API
 
 ## Prerequisites
   - Python ~= 2.7
