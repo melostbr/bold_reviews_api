@@ -7,8 +7,8 @@ from controllers.reviews_controller import ReviewsController
 
 
 app = Flask(__name__)
-app.config.from_object(os.environ['APP_SETTINGS'])
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config.from_object('config.DevelopmentConfig')
+
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
