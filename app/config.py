@@ -1,13 +1,16 @@
 import os
-basedir = os.path.abspath(os.path.dirname(__file__))
+from dotenv import load_dotenv
 
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(dotenv_path=basedir)
 
 class Config(object):
     DEBUG = False
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = 'this-really-needs-to-be-changed'
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
 
 
 class ProductionConfig(Config):
