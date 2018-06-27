@@ -2,7 +2,7 @@ runserver:
 	flask run
 
 createdb:
-	flask db init
+	createdb reviews_api
 
 migrations:
 	flask db migrate

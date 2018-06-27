@@ -22,4 +22,4 @@ class Review(db.Model):
         self.created_at = created_at
 
     def __repr__(self):
-        return 'Review {}'.format(self.id)
+        return '<Review {}>'.format(self.id)
