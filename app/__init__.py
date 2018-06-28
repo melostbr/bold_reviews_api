@@ -5,6 +5,7 @@ from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+from flask_cors import CORS
 app = Flask(__name__)
 app.config.from_object('config.DevelopmentConfig')
 
@@ -14,6 +15,7 @@ migrate = Migrate(app, db)
 import controllers, models
 
 # Routes
+CORS(app)
 @app.route("/<app>/reviews")
 def reviews(app):
     page = request.args.get('page', 1, type=int)
