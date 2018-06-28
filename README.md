@@ -1,15 +1,15 @@
 # Bold Reviews API
 
 ## Prerequisites
-  - Python ~= 2.7
+  - Python ~= 2.7.15
   - [Virtualenvwrapper](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)
   - PostgreSQL ~= 10
 
 ## Development
   - Download this project and `cd` inside of it;
-  - Run `mkvirtualenv  reviewer_api`;
+  - Run `mkvirtualenv  reviews_api`;
   - Run `pip install -r requirements.txt`;
-  - Run `workon test_api`;
+  - Run `workon reviews_api`;
   - Edit `$VIRTUAL_ENV/bin/postactivate` to set these local variables:
     ```
     export APP_SETTINGS="config.DevelopmentConfig"
@@ -40,11 +40,11 @@
   - JSON example:
   ```
     {
-      "id": 6958,      
+      "id": 6958,
       "shopify_domain": "islamicshopping24.myshopify.com",
       "app_slug": "product-upsell",
       "star_rating": 5,
-      "previous_star_rating": null,       
+      "previous_star_rating": null,
       "created_at": "2018-06-27T21:40:00.517504+00:00",
       "updated_at": null
     }
