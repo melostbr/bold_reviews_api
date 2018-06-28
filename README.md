@@ -13,14 +13,16 @@
   - Edit `$VIRTUAL_ENV/bin/postactivate` to set these local variables:
     ```
     export APP_SETTINGS="config.DevelopmentConfig"
-    export FLASK_APP="app/app.py"
-    export DATABASE_URL="postgresql://localhost/reviews_api"
+    export FLASK_APP="app/__init__.py"
+    export FLASK_ENV=development
+    export SQLALCHEMY_DATABASE_URI='postgresql://{user}:{passwd}@localhost/reviews_api'
     ```
   - Edit `$VIRTUAL_ENV/bin/postdeactivate` to unset them:
     ```
     unset APP_SETTINGS
     unset FLASK_APP
-    unset DATABASE_URL
+    unser FLASK_ENV
+    unset SQLALCHEMY_DATABASE_URI
     ```
 
 ## Running
